@@ -34,7 +34,7 @@ public class TimeSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.fKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
         {
             isPast = !isPast;
 

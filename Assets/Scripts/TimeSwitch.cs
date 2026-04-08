@@ -6,6 +6,12 @@ public class TimeSwitch : MonoBehaviour
 {
     public GameObject[] pastObjects;
     public GameObject[] futureObjects;
+    public GameObject[] persistentObjects;
+
+    public Material pastMat;
+    public Material futureMat;
+
+    bool isPast = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +20,15 @@ public class TimeSwitch : MonoBehaviour
         {
             obj.SetActive(false);
         }
+
+        foreach(GameObject obj in pastObjects)
+        {
+            obj.GetComponent<Renderer>().sharedMaterial = pastMat;
+        }
+        foreach (GameObject obj in persistentObjects)
+        {
+            obj.GetComponent<Renderer>().sharedMaterial = pastMat;
+        }
     }
 
     // Update is called once per frame
@@ -21,14 +36,30 @@ public class TimeSwitch : MonoBehaviour
     {
         if (Keyboard.current.fKey.wasPressedThisFrame)
         {
+            isPast = !isPast;
+
             foreach (GameObject obj in pastObjects)
             {
-                obj.SetActive(!obj.activeSelf);
+                obj.SetActive(isPast);
+                SetMat(obj);
             }
-            foreach (GameObject obj2 in futureObjects)
+
+            foreach (GameObject obj in futureObjects)
             {
-                obj2.SetActive(!obj2.activeSelf);
+                obj.SetActive(!isPast);
+                SetMat(obj);
+            }
+
+            foreach (GameObject obj in persistentObjects)
+            {
+                SetMat(obj);
             }
         }
+    }
+
+    void SetMat(GameObject obj)
+    {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        renderer.sharedMaterial = isPast ? pastMat : futureMat;
     }
 }

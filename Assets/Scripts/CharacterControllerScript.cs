@@ -20,6 +20,10 @@ public class CharacterControllerScript : MonoBehaviour
     public float gravity = -9.8f;
     Vector3 velocity;
 
+    private Vector3 currentVelocity;
+    public float acceleration = 10f;
+    public float deceleration = 12f;
+
     public Transform mainCamera;
 
     //private float xRotation;
@@ -82,18 +86,26 @@ public class CharacterControllerScript : MonoBehaviour
         float forwardInput = moveInput.y;
         float sideInput = moveInput.x;
 
-        Vector3 move = (transform.right * sideInput + transform.forward * forwardInput).normalized;
+        Vector3 moveDirection = (transform.right * sideInput + transform.forward * forwardInput).normalized;
 
-        if (sprintAction.IsPressed() && forwardInput > 0 && sprint > 0)
+        bool isMoving = moveInput.magnitude > 0.1f;
+
+        float targetSpeed = speed;
+
+        if (sprintAction.IsPressed() && isMoving && sprint > 0)
         {
-            controller.Move(move * sprintSpeed * Time.deltaTime);
+            targetSpeed = sprintSpeed;
             sprint -= drainRate * Time.deltaTime;
             counter = 0;
         }
-        else
-        {
-            controller.Move(move * speed * Time.deltaTime);
-        }
+
+        Vector3 targetVelocity = moveDirection * targetSpeed;
+
+        float rate = isMoving ? acceleration : deceleration;
+
+        currentVelocity = Vector3.MoveTowards(currentVelocity, targetVelocity, rate * Time.deltaTime);
+
+        controller.Move(currentVelocity * Time.deltaTime);
     }
 
     /*void Look()

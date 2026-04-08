@@ -153,11 +153,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2750624358099839915, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2750624358099839915, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: field of view
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750624358099839915, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: orthographic size
+      value: 15.07
       objectReference: {fileID: 0}
     - target: {fileID: 3038795187615326819, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.1
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.2
+      value: -35.8
       objectReference: {fileID: 0}
     - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: m_LocalRotation.w

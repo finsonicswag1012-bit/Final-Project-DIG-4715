@@ -242,6 +242,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90224904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4312153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977473722097567150, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 51.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366668959086418773, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
+      propertyPath: gravity
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 6366668959086418773, guid: aee4f777063e9364cb06489d6fdc5804, type: 3}
       propertyPath: sprintBar
       value: 

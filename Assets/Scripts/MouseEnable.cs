@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseEnable : MonoBehaviour
 {
@@ -7,5 +8,11 @@ public class MouseEnable : MonoBehaviour
     {
         Cursor.visible = true;
     Cursor.lockState = CursorLockMode.None;
+    }
+
+    void Update()
+    {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            Application.Quit();
     }
 }

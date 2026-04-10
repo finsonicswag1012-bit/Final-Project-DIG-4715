@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync("GameplayPrototype");
     }
 
     public void QuitGame()
@@ -16,17 +16,17 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync("Credits");
     }
 
     public void Controls()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync("Controls");
     }
 
      public void Lore()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync("Lore");
     }
 
     public void BacktoMain()

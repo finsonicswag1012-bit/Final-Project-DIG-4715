@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterControllerScript : MonoBehaviour
@@ -82,7 +83,7 @@ public class CharacterControllerScript : MonoBehaviour
         sprintBarImage.fillAmount = sprint / maxSprint;
 
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            Application.Quit();
+            SceneManager.LoadSceneAsync("Title");
     }
 
     void Movement()

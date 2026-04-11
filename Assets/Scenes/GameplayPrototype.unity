@@ -365,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
   target: {fileID: 3038795187297624233}
   ySmoothTime: 0.4
+  horizontalSmoothTime: 0.1
 --- !u!4 &114231403
 Transform:
   m_ObjectHideFlags: 0

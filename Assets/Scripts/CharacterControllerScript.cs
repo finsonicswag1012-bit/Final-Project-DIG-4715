@@ -82,8 +82,8 @@ public class CharacterControllerScript : MonoBehaviour
 
         sprintBarImage.fillAmount = sprint / maxSprint;
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            SceneManager.LoadSceneAsync("Title");
+        /*if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            SceneManager.LoadSceneAsync("Title");*/
     }
 
     void Movement()

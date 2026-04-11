@@ -26,7 +26,7 @@ public class CharacterControllerScript : MonoBehaviour
     public float acceleration = 10f;
     public float deceleration = 12f;
 
-    public Transform mainCamera;
+    //public Transform mainCamera;
 
     //private float xRotation;
 
